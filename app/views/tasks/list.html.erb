@@ -1,0 +1,10 @@
+<div class="container">
+<h1>My Tasks</h1>
+<div class="list">
+  <% @tasks.each do |task| %>
+    <li><%= link_to task.title, task_path(task) %></li>
+  <% end %>
+</div>
+
+<button type="button" class="btn btn-outline-success"><%= link_to "Create a new task", "/tasks/new" %></button>
+</div>
